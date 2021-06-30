@@ -1,0 +1,7 @@
+{
+  "name": "getting-started-iv-angular",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
