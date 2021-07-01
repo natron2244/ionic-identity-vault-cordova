@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 
+import { ValutService } from './vault.service';
+
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
@@ -7,6 +9,15 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  constructor(
+    private vaultService: ValutService,
+  ) {}
 
+  get() {
+    this.vaultService.getSecret('test');
+  }
+
+  set() {
+    this.vaultService.setSecret('test', 'yay!');
+  }
 }
